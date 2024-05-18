@@ -5,6 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #FFBE98;
+    font-family: "Rubik", sans-serif;
 }
 .container {
     display: flex;
@@ -54,8 +55,15 @@ textarea::-webkit-scrollbar-thumb {
     line-height: 1.5;
 }
 
-#outputJson{
-    line-height: 2;
+#outputJson {
+    width: 45%;
+    height: 100%;
+    margin: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
 }
 
 .buttons {

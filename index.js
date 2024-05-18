@@ -1,20 +1,20 @@
+const container = document.getElementById('outputJson');
+const options = { mode: 'view' };
+const editor = new JSONEditor(container, options);
+
 function validateJson() {
     const inputJson = document.getElementById("inputJson").value;
-    const outputJson = document.getElementById("outputJson");
     try {
-        if(inputJson.trim().length == 0){
-            return
-        }
         const jsonObj = JSON.parse(inputJson);
-        outputJson.value = JSON.stringify(jsonObj, null, 4);
+        editor.set(jsonObj);
     } catch (e) {
-        outputJson.value = "Invalid JSON: " + e.message;
+        editor.setText('Invalid JSON: ' + e.message);
     }
   }
 
   function clearJson() {
     document.getElementById("inputJson").value = "";
-    document.getElementById("outputJson").value = "";
+    editor.set({});
   }
 
   function sampleJson() {
