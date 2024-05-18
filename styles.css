@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFBE98;
+}
+.container {
+    display: flex;
+    align-items: center;
+    background: #F7DED0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+}
+textarea {
+    width: 40%;
+    height: 95%;
+    margin: 0 20px;
+    padding: 15px;
+    border: 1px solid #FEECE2;
+    border-radius: 8px;
+    resize: none;
+    font-size: 14px;
+    font-family: "Rubik", sans-serif;
+    background-color: #FEECE2;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus{
+    outline: 1px solid#E2BFB3;
+}
+
+
+textarea::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #FEECE2;        /* color of the tracking area */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #E2BFB3;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #E2BFB3;  /* creates padding around scroll thumb */
+}
+
+#inputJson{
+    color: rgb(97, 69, 69);
+    line-height: 1.5;
+}
+
+#outputJson{
+    line-height: 2;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+}
+.buttons button {
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFBE98;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease;
+    font-family: "Rubik", sans-serif;
+}
+.buttons button:hover {
+    background-color: #fdaa7a;
+}
