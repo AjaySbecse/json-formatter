@@ -18,7 +18,7 @@ body {
     height: 80%;
 }
 textarea {
-    width: 40%;
+    width: 35%;
     height: 95%;
     margin: 0 20px;
     padding: 15px;
@@ -56,7 +56,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 #outputJson {
-    width: 45%;
+    width: 50%;
     height: 100%;
     margin: 0 20px;
     border: 1px solid #ccc;
@@ -71,6 +71,7 @@ textarea::-webkit-scrollbar-thumb {
     flex-direction: column;
     justify-content: space-between;
     height: 140px;
+    width: 150px;
 }
 .buttons button {
     padding: 12px;
@@ -87,4 +88,34 @@ textarea::-webkit-scrollbar-thumb {
 }
 .buttons button:hover {
     background-color: #fdaa7a;
+}
+
+/* Custom styles for JSONEditor */
+.jsoneditor {
+    font-family: "Rubik", sans-serif;
+    border-radius: 8px;
+    border: 1px solid #FFBE98;
+}
+.jsoneditor-tree {
+    background: #fdf4f0 !important;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.jsoneditor-menu {
+    background-color: #FFBE98;
+    border: #FFBE98;
+}
+
+.jsoneditor-tree .jsoneditor-field {
+    color: #d32f2f;
+}
+.jsoneditor-tree .jsoneditor-value {
+    color: #1976d2;
+}
+.jsoneditor-tree .jsoneditor-value.jsoneditor-string {
+    color: #388e3c;
+}
+.jsoneditor-tree .jsoneditor-value.jsoneditor-number {
+    color: #f57c00;
 }
