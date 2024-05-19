@@ -5,9 +5,15 @@ const editor = new JSONEditor(container, options);
 function validateJson() {
     const inputJson = document.getElementById("inputJson").value;
     try {
+        if(inputJson.trim().length === 0){
+            return;
+        }
         const jsonObj = JSON.parse(inputJson);
+        JSON.stringify(jsonObj);
         editor.set(jsonObj);
     } catch (e) {
+        showToast("Exception occured : " + e.message);
+        console.log(e.message)
         editor.setText('Invalid JSON: ' + e.message);
     }
   }
@@ -15,6 +21,15 @@ function validateJson() {
   function clearJson() {
     document.getElementById("inputJson").value = "";
     editor.set({});
+  }
+
+  function showToast(message) {
+    var toast = document.getElementById("toast");
+    toast.innerHTML = message;
+    toast.className = "toast show";
+    setTimeout(function(){
+      toast.className = toast.className.replace("show", ""); 
+    }, 5000);
   }
 
   function sampleJson() {

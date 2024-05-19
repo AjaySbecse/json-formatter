@@ -119,3 +119,46 @@ textarea::-webkit-scrollbar-thumb {
 .jsoneditor-tree .jsoneditor-value.jsoneditor-number {
     color: #f57c00;
 }
+
+/* Styles for toast message */
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #f57c00;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {top: -50px; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+    from {top: -50px; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: -50px; opacity: 0;}
+  }
+
+  @keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: -50px; opacity: 0;}
+  }
